@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Balas Dendam Terbaik dalam Islam</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('home.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 20px;
+            color: white;
+        }
+        .quiz-container {
+            width: 70%;
+            margin: auto;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #white;
+            font-size: 24px;
+        }
+        .question {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            border-left: 5px solid #002366;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        button {
+            background-color: #002366;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            display: block;
+            margin: 20px auto;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #002366;
+        }
+        .hidden {
+            display: none;
+        }
+        p {
+            margin: 10px 0;
+        }
+        #error {
+            color: red;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .result-slide {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 10;
+            display: none;
+            flex-direction: column;
+            text-align: center;
+            overflow-y: auto;
+        }
+        .result-slide h3, .result-slide p {
+            margin: 10px 0;
+        }
+        .wrong {
+            color: red;
+        }
+        .correct {
+            color: green;
+        }
+        .result-question {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+       .box {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px auto;
+    width: 70%;
+}
+
+.correct {
+    color: green;
+}
+
+.wrong {
+    color: red;
+}
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1 align="center">Kuis Interaktif Hakikat dunia menurut Islam</h1></p>
+    
+    <div class="question">
+	<p><b>1. Menurut Al-Qur'an, kehidupan dunia digambarkan sebagai apa?</b></p>
+	<input type="Radio" name="q1" value="A"> A. Tempat persinggahan sementara<br>
+	<input type="Radio" name="q1" value="B"> B. Tempat tinggal abadi<br>
+	<input type="Radio" name="q1" value="C"> C. Surga bagi orang beriman<br>
+	<input type="Radio" name="q1" value="D"> D. Permainan yang kekal<br>
+</div>
+
+<div class="question">
+	<p><b>2. Dalam QS. Al-Hadid: 20, kehidupan dunia disamakan dengan apa?</b></p>
+	<input type="Radio" name="q2" value="A"> A. Penjara<br>
+	<input type="Radio" name="q2" value="B"> B. Permainan dan hiburan yang melalaikan<br>
+	<input type="Radio" name="q2" value="C"> C. Ujian yang kekal<br>
+	<input type="Radio" name="q2" value="D"> D. Ladang amal<br>
+</div>
+
+<div class="question">
+	<p><b>3. Apa yang dimaksud Rasulullah SAW dalam hadits tentang "dunia sebagai penjara bagi orang mukmin"?</b></p>
+	<input type="Radio" name="q3" value="A"> A. Dunia adalah tempat yang membatasi kebebasan orang mukmin<br>
+	<input type="Radio" name="q3" value="B"> B. Orang mukmin harus menghindari kehidupan dunia<br>
+	<input type="Radio" name="q3" value="C"> C. Dunia penuh dengan ujian bagi orang mukmin<br>
+	<input type="Radio" name="q3" value="D"> D. Dunia adalah tempat kebahagiaan bagi orang mukmin<br>
+</div>
+
+<div class="question">
+	<p><b>4. Menurut QS. Ali 'Imran: 185, apa yang akan dirasakan oleh setiap yang bernyawa?</b></p>
+	<input type="Radio" name="q4" value="A"> A. Kematian<br>
+	<input type="Radio" name="q4" value="B"> B. Kesenangan<br>
+	<input type="Radio" name="q4" value="C"> C. Kebahagiaan abadi<br>
+	<input type="Radio" name="q4" value="D"> D. Harta yang melimpah<br>
+</div>
+
+<div class="question">
+	<p><b>5. Apa yang dimaksud dengan "dunia adalah ladang bagi akhirat" dalam hadits Nabi SAW?</b></p>
+	<input type="Radio" name="q5" value="A"> A. Dunia tempat menikmati kesenangan<br>
+	<input type="Radio" name="q5" value="B"> B. Dunia tempat mengumpulkan amal sebagai bekal akhirat<br>
+	<input type="Radio" name="q5" value="C"> C. Dunia tempat berlomba mengumpulkan harta<br>
+	<input type="Radio" name="q5" value="D"> D. Dunia tempat yang abadi bagi umat manusia<br>
+</div>
+
+<div class="question">
+	<p><b>6. Apa bekal terbaik yang disebutkan dalam QS. Al-Baqarah: 197?</b></p>
+	<input type="Radio" name="q6" value="A"> A. Harta<br>
+	<input type="Radio" name="q6" value="B"> B. Anak-anak<br>
+	<input type="Radio" name="q6" value="C"> C. Ketakwaan<br>
+	<input type="Radio" name="q6" value="D"> D. Ilmu<br>
+</div>
+
+<div class="question">
+	<p><b>7. Apa makna istiqomah dalam ketaatan yang dicontohkan dalam hadits Rasulullah SAW?</b></p>
+	<input type="Radio" name="q7" value="A"> A. Beribadah dengan niat yang baik sekali seumur hidup<br>
+	<input type="Radio" name="q7" value="B"> B. Berbuat kebaikan secara konsisten walau sedikit<br>
+	<input type="Radio" name="q7" value="C"> C. Melakukan banyak amal hanya pada hari-hari tertentu<br>
+	<input type="Radio" name="q7" value="D"> D. Beramal dengan jumlah yang besar namun tidak rutin<br>
+</div>
+
+<div class="question">
+	<p><b>8. Bagaimana seharusnya sikap seorang mukmin terhadap musibah dan nikmat dunia?</b></p>
+	<input type="Radio" name="q8" value="A"> A. Menganggap semua itu sebagai ujian dari Allah<br>
+	<input type="Radio" name="q8" value="B"> B. Menikmati nikmat dan mengabaikan musibah<br>
+	<input type="Radio" name="q8" value="C"> C. Hanya memikirkan akhirat tanpa peduli dunia<br>
+	<input type="Radio" name="q8" value="D"> D. Menyalahkan takdir atas musibah yang datang<br>
+</div>
+
+<div class="question">
+	<p><b>9. Apa yang akan terjadi dengan segala yang kita kumpulkan di dunia saat kematian tiba?</b></p>
+	<input type="Radio" name="q9" value="A"> A. Semua akan tetap ada dan kita nikmati<br>
+	<input type="Radio" name="q9" value="B"> B. Semuanya akan hilang dan tidak ada yang tersisa<br>
+	<input type="Radio" name="q9" value="C"> C. Semua harta akan dibawa ke akhirat<br>
+	<input type="Radio" name="q9" value="D"> D. Keluarga akan mewarisi harta kita<br>
+</div>
+
+<div class="question">
+	<p><b>10. Apa perintah Allah dalam QS. Ali 'Imran: 102 terkait kematian?</b></p>
+	<input type="Radio" name="q10" value="A"> A. Janganlah mati kecuali dalam keadaan kaya<br>
+	<input type="Radio" name="q10" value="B"> B. Janganlah mati kecuali dalam keadaan Muslim<br>
+	<input type="Radio" name="q10" value="C"> C. Janganlah mati kecuali di tanah kelahiran<br>
+	<input type="Radio" name="q10" value="D"> D. Janganlah mati kecuali setelah menyelesaikan semua urusan dunia<br>
+</div>
+    
+    <!-- Error Message -->
+    <p id="error" class="hidden">Harap diisi semua</p>
+
+    <!-- Tombol Submit -->
+    <button onclick="checkAnswers()">Sudah Selesai</button>
+</div>
+
+<!-- Hasil Slide -->
+<div id="result-slide" class="result-slide">
+    <h3>Hasil Kuis</h3>
+    <p id="loading">Sabar ya lagi dihitung✨...</p>
+    <p id="score" class="hidden"></p>
+    <div id="correct-answers" class="hidden"></div>
+</div>
+
+<script>
+    const correctAnswers = ['B', 'B','B','C','C','A','B','B','B','C'];
+
+    function checkAnswers() {
+    let score = 0;
+    let allAnswered = true;
+    let correctList = ''; // List untuk nomor pertanyaan yang benar
+    let incorrectList = ''; // List untuk nomor pertanyaan yang salah
+    let correctCount = 0;
+    let incorrectCount = 0;
+
+    // Loop untuk memastikan setiap pertanyaan dijawab dan menghitung skor
+    for (let i = 1; i <= 10; i++) {
+        const answer = document.querySelector(`input[name="q${i}"]:checked`);
+
+        // Periksa apakah pertanyaan dijawab
+        if (!answer) {
+            allAnswered = false;
+            break;
+        }
+
+        // Cek apakah jawaban benar atau salah
+        if (answer.value === correctAnswers[i - 1]) {
+            score++;
+            correctCount++;
+            correctList += `<span>Pertanyaan ${i} (pilihanmu: ${answer.value})</span><br>`;
+        } else {
+            incorrectCount++;
+            incorrectList += `<span>Pertanyaan ${i} (pilihanmu: ${answer.value})</span><br>`;
+        }
+    }
+
+    // Jika belum semua pertanyaan dijawab, tampilkan pesan error
+    if (!allAnswered) {
+        document.getElementById("error").classList.remove("hidden");
+        return;
+    }
+
+    // Jika semua pertanyaan dijawab, lanjutkan dan hitung skor
+    document.getElementById("error").classList.add("hidden");
+    const totalScore = score * 10; // Skor akhir dihitung berdasarkan 10 pertanyaan
+
+    // Loading 5 detik sebelum menampilkan hasil
+    document.querySelector(".quiz-container").style.display = "none";
+    document.getElementById("result-slide").style.display = "flex";
+
+    setTimeout(() => {
+        document.getElementById("loading").classList.add("hidden");
+        document.getElementById("score").classList.remove("hidden");
+        document.getElementById("correct-answers").classList.remove("hidden");
+
+        // Menampilkan skor, jumlah benar dan salah, serta daftar jawaban
+        document.getElementById("score").innerHTML = `
+            <div class="box">
+                <h3>Hasil Anda:</h3>
+                <p>Benar = ${correctCount}</p>
+                <p>Salah = ${incorrectCount}</p>
+                <p>Skor Anda: ${totalScore}</p>
+                <h3>Jawaban Benar</h3>
+                ${correctList || '<p>Tidak ada jawaban benar</p>'}
+                <h3>Jawaban Salah</h3>
+                ${incorrectList || '<p>Tidak ada jawaban salah</p>'}
+            </div>
+        `;
+    }, 5000);
+}
+
+// Fungsi untuk mendapatkan teks jawaban
+function getAnswerText(questionNumber, answerValue) {
+    
+    const answerTexts = {
+    1: {
+        A: "Tempat persinggahan sementara",
+        B: "Tempat tinggal abadi",
+        C: "Surga bagi orang beriman",
+        D: "Permainan yang kekal"
+    },
+    2: {
+        A: "Penjara",
+        B: "Permainan dan hiburan yang melalaikan",
+        C: "Ujian yang kekal",
+        D: "Ladang amal"
+    },
+    3: {
+        A: "Dunia adalah tempat yang membatasi kebebasan orang mukmin",
+        B: "Orang mukmin harus menghindari kehidupan dunia",
+        C: "Dunia penuh dengan ujian bagi orang mukmin",
+        D: "Dunia adalah tempat kebahagiaan bagi orang mukmin"
+    },
+    4: {
+        A: "Kematian",
+        B: "Kesenangan",
+        C: "Kebahagiaan abadi",
+        D: "Harta yang melimpah"
+    },
+    5: {
+        A: "Dunia tempat menikmati kesenangan",
+        B: "Dunia tempat mengumpulkan amal sebagai bekal akhirat",
+        C: "Dunia tempat berlomba mengumpulkan harta",
+        D: "Dunia tempat yang abadi bagi umat manusia"
+    },
+    6: {
+        A: "Harta",
+        B: "Anak-anak",
+        C: "Ketakwaan",
+        D: "Ilmu"
+    },
+    7: {
+        A: "Beribadah dengan niat yang baik sekali seumur hidup",
+        B: "Berbuat kebaikan secara konsisten walau sedikit",
+        C: "Melakukan banyak amal hanya pada hari-hari tertentu",
+        D: "Beramal dengan jumlah yang besar namun tidak rutin"
+    },
+    8: {
+        A: "Menganggap semua itu sebagai ujian dari Allah",
+        B: "Menikmati nikmat dan mengabaikan musibah",
+        C: "Hanya memikirkan akhirat tanpa peduli dunia",
+        D: "Menyalahkan takdir atas musibah yang datang"
+    },
+    9: {
+        A: "Semua akan tetap ada dan kita nikmati",
+        B: "Semuanya akan hilang dan tidak ada yang tersisa",
+        C: "Semua harta akan dibawa ke akhirat",
+        D: "Keluarga akan mewarisi harta kita"
+    },
+    10: {
+        A: "Janganlah mati kecuali dalam keadaan kaya",
+        B: "Janganlah mati kecuali dalam keadaan Muslim",
+        C: "Janganlah mati kecuali di tanah kelahiran",
+        D: "Janganlah mati kecuali setelah menyelesaikan semua urusan dunia"
+    }
+};
+  return answerTexts[questionNumber][answerValue];
+}
+</script>
+</body>
+</html>
